@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,*:before, *:after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus, :active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+
+html,body{
+
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0;border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+body{
+    font-family: 'Comfortaa', cursive;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.wrapper{
+    flex: 1 1 auto;
+    flex-grow: 1;
+    background-color: gainsboro;
+}
+.header{
+    background-color: rgb(237, 153, 26);
+    padding: 20px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.wrBut{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    max-width: 700px;
+    margin:0 auto;
+}
+.button{
+    margin: auto;
+    padding: 10px;
+    background-color: darkgoldenrod;
+    border-radius: 5px;
+}
+.wrCont{
+    display: flex;
+    max-width: 990px;
+    margin:0 auto;
+    height: 100%;
+    flex-direction: column;
+}
+.main{
+    flex-grow: 1;
+}
+.cardRow{
+    display: flex;
+    margin: 0 -20px;
+    flex-wrap: wrap;
+}
+.cardCol{
+    flex: 0 1 33.333%;
+    padding: 0 20px;
+    display: flex;
+}
+.card{
+    border: 2px solid blueviolet;
+    width: 300px;
+    height: 270px;
+    padding: 20px;
+    margin:10px auto;
+    display: flex;
+    flex-direction: column;
+
+    align-items:center;
+}
+.cardTitle{
+    font-size: 20px;
+    padding: 5px;
+    height: 2.5em;
+}
+.CF{
+    flex-grow: 1;
+}
+.cardRoundImg{
+    border-radius: 50%;
+}
+.cardImg{
+    height:100px;
+    width:100px;
+
+}
+.cardPrice{
+    overflow: hidden;
+    margin: 5px;
+}
+.cardCart{
+    height:10px;
+    width: 10px;
+    background: red;
+}
+.cardBut{
+    display: block;
+    background: white;
+    margin: 0 20px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 7px;
+    font-size: 18px;
+    transition: 0.8s;
+}
+.cardBut:hover{
+    background: red;
+    color:blue;
+}
+
+.footer{
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items:center;
+    background-color: black;
+    color:white;
+}
+.invisible{
+    display: none;
+}
