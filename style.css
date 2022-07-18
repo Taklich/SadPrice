@@ -72,6 +72,35 @@ body{
     height: 100%;
     flex-direction: column;
 }
+.wrCart{
+    position: fixed;
+    top:0;
+    right:0;
+    height: 100%;
+    width:400px;
+    background: red;
+    transition-duration: 3s;
+    
+}
+.cart{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.hideCart{
+    transform: translate(100%);
+    
+}
+.cartUlWr{
+    flex-grow: 1;
+}
+.cartClose{
+    height:50px;
+    background-color: blue;
+    color: azure;
+    width: 70%;
+    margin: 0 auto;
+}
 .main{
     flex-grow: 1;
 }

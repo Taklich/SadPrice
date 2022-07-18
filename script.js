@@ -3,12 +3,14 @@ let ButR = document.querySelector('.ButR');
 let ButB = document.querySelector('.ButB');
 let ButAll = document.querySelector('.ButAll');
 let ButStash = document.querySelector('.ButStach');
+let cartClose = document.querySelector('.cartClose');
 
 
 
 let cardBut = document.querySelectorAll('.cardBut');
 let collection = document.querySelectorAll('.cardCol');
-
+let cart = document.querySelector('.wrCart');
+let cartUl = document.querySelector('.cartUl');
 
 ButS.addEventListener('click',function(){
     collection.forEach(element => {
@@ -45,6 +47,12 @@ ButAll.addEventListener('click',function(){
         element.classList.remove('invisible');
     });
 })
+ButStash.addEventListener('click', function(){
+    cart.classList.toggle('hideCart');
+})
+cartClose.addEventListener('click', function(){
+    cart.classList.toggle('hideCart')
+})
 
 {
 let stash = 0;
@@ -52,6 +60,7 @@ let sumcost = 0;
 console.log(stash, sumcost);
 function stashupd(stash){
     ButStash.textContent = `Корзина: ${stash} на ${sumcost}$`;
+    
 };
 cardBut.forEach(function(item, i, arr){
     console.log(stash);
@@ -59,7 +68,11 @@ cardBut.forEach(function(item, i, arr){
         stash = stash+1;
         sumcost = sumcost + Number(this.previousSibling.previousSibling.textContent.slice(0,length-1));
         stashupd(stash,sumcost);
-
+        console.log(this.parentElement.children[0].textContent);
+        cartUl.insertAdjacentHTML(
+            'beforeend',
+            `<li>${this.parentElement.children[0].textContent} за ${this.previousSibling.previousSibling.textContent.slice(0,length-1)}$ </li>`
+        );
     })
 })
 }
